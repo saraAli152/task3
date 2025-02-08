@@ -9,7 +9,11 @@ import { Iproduct } from '../../models/product';
   styleUrl: './products.component.scss'
 })
 export class ProductsComponent {
-  @Input() product: Iproduct;
-
-
+  @Input() product: Iproduct= {
+    name: '',
+    image: '',
+    price: 0,
+    description: '',
+  };
 }
+

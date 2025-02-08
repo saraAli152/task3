@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PRODUCTS } from '../Data/db-product';
+import { PRODUCTS } from '../app/Data/db-product';
 import { Iproduct } from './models/product';
 
 @Component({
@@ -10,9 +10,9 @@ import { Iproduct } from './models/product';
 })
 export class AppComponent {
   title = 'full-demo';
-  productItems: Iproduct[] = PRODUCTS;
+  productItems= PRODUCTS;
 
-  onAddProducts(productData: Iproduct[]) {
-    this.productItems = productData;
+  onAddProducts(productData:Iproduct) {
+    PRODUCTS.push(productData)
   }
 }
